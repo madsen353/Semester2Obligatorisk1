@@ -19,13 +19,11 @@ namespace PrioteretKaldsKoe
     /// </summary>
     public partial class MainWindow : Window
     {
-        PriorityQueue<int> myQueue = new PriorityQueue<int>();
-        //List<int> callerID = new List<int>();
-        private string currentCallPickUpTimestamp;
-        private int currentCall;
-
-
+        private PriorityQueue<Opkald> myQueue = new PriorityQueue<Opkald>();
+        private PriorityQueue<PrioriteretOpkald> myPriorityQueue = new PriorityQueue<PrioriteretOpkald>();
         int i = 0;
+        private int kaldNummer = 0;
+        private int prioriteretKaldNummer = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,12 +31,10 @@ namespace PrioteretKaldsKoe
 
         private void btn_TakeCall_Click(object sender, RoutedEventArgs e)
         {
-            //if (currentCall == 0)
-            //{
-                //currentCall = myQueue.First();
-                myQueue.Dequeue();
-                currentCallPickUpTimestamp = DateTime.Now.ToString();
-           // }
+
+               Opkald thisOpkald = myPriorityQueue.GetOldestCall();
+           // int numberToRemove = thisOpkald.opkaldsID;
+                myQueue.Dequeue(thisOpkald);
 
         }
 
@@ -51,9 +47,19 @@ namespace PrioteretKaldsKoe
         {
 
             //callerID.Add(i++);
-            myQueue.Enqueue(callerID.Count);
+            Opkald nytOpkald = new Opkald(kaldNummer);
+            myQueue.Enqueue(nytOpkald);
+            kaldNummer++;
         }
 
-
+        private void btn_MakePriorityCall_Click(object sender, RoutedEventArgs e)
+        {
+            Opkald nytOpkald = new PrioriteretOpkald(kaldNummer);
+            PrioriteretOpkald nytPrioriteretOpkald = new PrioriteretOpkald(kaldNummer);
+            myQueue.Enqueue(nytOpkald);
+            myPriorityQueue.Enqueue(nytPrioriteretOpkald);
+            kaldNummer++;
+            prioriteretKaldNummer++;
+        }
     }
 }

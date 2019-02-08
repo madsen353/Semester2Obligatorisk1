@@ -9,6 +9,7 @@
     <Grid>
         <Button Content="Take Call" HorizontalAlignment="Left" Margin="137,124,0,0" VerticalAlignment="Top" Width="75" Name="btn_TakeCall" Click="btn_TakeCall_Click"/>
         <Button Content="End Call" HorizontalAlignment="Left" Margin="506,124,0,0" VerticalAlignment="Top" Width="75" Name="btn_EndCall" Click="btn_EndCall_Click" />
-        <Button Content="MakeCall" HorizontalAlignment="Left" Margin="338,62,0,0" VerticalAlignment="Top" Width="75" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
+        <Button Content="Make Call" HorizontalAlignment="Left" Margin="338,62,0,0" VerticalAlignment="Top" Width="75" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
+        <Button Content="Make Priority Call" HorizontalAlignment="Left" Margin="361,213,0,0" VerticalAlignment="Top" Width="75" Name="btn_MakePriorityCall" Click="btn_MakePriorityCall_Click"/>
     </Grid>
 </Window>
