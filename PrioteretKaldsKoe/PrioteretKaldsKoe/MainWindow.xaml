@@ -1,0 +1,14 @@
+﻿<Window x:Class="PrioteretKaldsKoe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrioteretKaldsKoe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Take Call" HorizontalAlignment="Left" Margin="137,124,0,0" VerticalAlignment="Top" Width="75" Name="btn_TakeCall" Click="btn_TakeCall_Click"/>
+        <Button Content="End Call" HorizontalAlignment="Left" Margin="506,124,0,0" VerticalAlignment="Top" Width="75" Name="btn_EndCall" Click="btn_EndCall_Click" />
+        <Button Content="MakeCall" HorizontalAlignment="Left" Margin="338,62,0,0" VerticalAlignment="Top" Width="75" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
+    </Grid>
+</Window>
