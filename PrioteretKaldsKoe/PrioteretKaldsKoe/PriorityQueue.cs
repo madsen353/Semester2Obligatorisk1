@@ -11,7 +11,6 @@ namespace PrioteretKaldsKoe
             private T[] arrayOfGivenObjectType;
             private int arrayCount = 1;
             private int currentArraySpot = 0;
-        Opkald ny =new Opkald();
 
 
 
@@ -59,23 +58,29 @@ namespace PrioteretKaldsKoe
             return returnObject;
         }
 
+        public T GetsNextCall(int callerID)
+        {
+            return arrayOfGivenObjectType[callerID];
+        }
+
             public void Dequeue(T obj)
             {
-
-                //arrayOfGivenObjectType[obj]
-                T numToRemove = obj;
-
-                arrayOfGivenObjectType = arrayOfGivenObjectType.Where(val => val != numToRemove).ToArray();
-                foreach (T opkald in arrayOfGivenObjectType)
+                if (obj.GetType() == arrayOfGivenObjectType.GetType())
                 {
-                    if (arrayOfGivenObjectType[0])
-                    {
-                        else
-                        {
-                                
-                        }
-                    }
+                    
                 }
+                obj.GetType() == arrayOfGivenObjectType.GetType() 
+                if (arrayOfGivenObjectType.Contains())
+                {
+                    
+                }
+                else
+                {
+                    
+                }
+
+                
+
         }
         public void Dequeue()
         {

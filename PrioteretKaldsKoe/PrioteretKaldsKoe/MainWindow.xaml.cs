@@ -31,10 +31,39 @@ namespace PrioteretKaldsKoe
 
         private void btn_TakeCall_Click(object sender, RoutedEventArgs e)
         {
+            if (prioriteretKaldNummer > 0)
+            {
+                Opkald thisOpkald = myPriorityQueue.GetOldestCall();
+                int oldestPriorityCall = thisOpkald.opkaldsID;
+                int whileCounter =0;
+                while (myQueue.GetsNextCall(whileCounter).opkaldsID < oldestPriorityCall)
+                {
 
-               Opkald thisOpkald = myPriorityQueue.GetOldestCall();
-           // int numberToRemove = thisOpkald.opkaldsID;
-                myQueue.Dequeue(thisOpkald);
+                            myQueue.GetsNextCall(thisOpkald.opkaldsID);
+                    whileCounter++;
+
+                }
+
+                myQueue.Dequeue(myQueue.GetsNextCall(whileCounter));
+
+
+            }
+            else
+            {
+                myQueue.Dequeue();
+            }
+            //if (myPriorityQueue.GetOldestCall() != null) 
+            //{
+            //    Opkald thisOpkald = myPriorityQueue.GetOldestCall();
+            //    // int numberToRemove = thisOpkald.opkaldsID;
+            //    myQueue.Dequeue(thisOpkald);
+            //    myPriorityQueue.Dequeue();
+            //}
+            //else
+            //{
+            //    myQueue.Dequeue();
+            //}
+
 
         }
 
