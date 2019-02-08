@@ -8,15 +8,15 @@ namespace PrioteretKaldsKoe
 {
     class PrioriteretOpkald : Opkald
     {
-        
-        private int opkaldsID { get; set; }
+
+        public int opkaldsID;
         public PrioriteretOpkald(int id)
         {
             this.opkaldsID = id;
         }
         public PrioriteretOpkald()
         {
-            
+
         }
     }
 }

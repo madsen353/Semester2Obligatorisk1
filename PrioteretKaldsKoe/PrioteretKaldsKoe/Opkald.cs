@@ -8,7 +8,7 @@ namespace PrioteretKaldsKoe
 {
     class Opkald
     {
-        public int opkaldsID { get; set; }
+        public int opkaldsID;
 
         public Opkald(int id)
         {

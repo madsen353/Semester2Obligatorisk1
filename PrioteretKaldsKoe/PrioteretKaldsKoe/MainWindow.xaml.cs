@@ -24,6 +24,7 @@ namespace PrioteretKaldsKoe
         int i = 0;
         private int kaldNummer = 0;
         private int prioriteretKaldNummer = 0;
+        private int antalOpkaldIkoe =0 ;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,38 +34,16 @@ namespace PrioteretKaldsKoe
         {
             if (prioriteretKaldNummer > 0)
             {
-                Opkald thisOpkald = myPriorityQueue.GetOldestCall();
-                int oldestPriorityCall = thisOpkald.opkaldsID;
-                int whileCounter =0;
-                while (myQueue.GetsNextCall(whileCounter).opkaldsID < oldestPriorityCall)
-                {
+                    myQueue.Dequeue(myPriorityQueue.GetOldestCall());
 
-                            myQueue.GetsNextCall(thisOpkald.opkaldsID);
-                    whileCounter++;
-
-                }
-
-                myQueue.Dequeue(myQueue.GetsNextCall(whileCounter));
-
-
+                prioriteretKaldNummer--;
             }
             else
             {
                 myQueue.Dequeue();
             }
-            //if (myPriorityQueue.GetOldestCall() != null) 
-            //{
-            //    Opkald thisOpkald = myPriorityQueue.GetOldestCall();
-            //    // int numberToRemove = thisOpkald.opkaldsID;
-            //    myQueue.Dequeue(thisOpkald);
-            //    myPriorityQueue.Dequeue();
-            //}
-            //else
-            //{
-            //    myQueue.Dequeue();
-            //}
 
-
+            
         }
 
         private void btn_EndCall_Click(object sender, RoutedEventArgs e)
@@ -79,6 +58,7 @@ namespace PrioteretKaldsKoe
             Opkald nytOpkald = new Opkald(kaldNummer);
             myQueue.Enqueue(nytOpkald);
             kaldNummer++;
+            antalOpkaldIkoe++;
         }
 
         private void btn_MakePriorityCall_Click(object sender, RoutedEventArgs e)
@@ -89,6 +69,7 @@ namespace PrioteretKaldsKoe
             myPriorityQueue.Enqueue(nytPrioriteretOpkald);
             kaldNummer++;
             prioriteretKaldNummer++;
+            antalOpkaldIkoe++;
         }
     }
 }
