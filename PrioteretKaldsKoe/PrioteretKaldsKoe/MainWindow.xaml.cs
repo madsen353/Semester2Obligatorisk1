@@ -29,31 +29,24 @@ namespace PrioteretKaldsKoe
         {
             InitializeComponent();
         }
-
         private void btn_TakeCall_Click(object sender, RoutedEventArgs e)
         {
             if (prioriteretKaldNummer > 0)
             {
                     myQueue.Dequeue(myPriorityQueue.GetOldestCall());
-
-                prioriteretKaldNummer--;
+                    prioriteretKaldNummer--;
             }
             else
             {
-                myQueue.Dequeue();
-            }
-
-            
+                    myQueue.Dequeue();
+            }           
         }
-
         private void btn_EndCall_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void btn_MakeCall_Click(object sender, RoutedEventArgs e)
         {
-
             //callerID.Add(i++);
             Opkald nytOpkald = new Opkald(kaldNummer);
             myQueue.Enqueue(nytOpkald);
