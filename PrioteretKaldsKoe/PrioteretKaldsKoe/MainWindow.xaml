@@ -7,9 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Take Call" HorizontalAlignment="Left" Margin="137,124,0,0" VerticalAlignment="Top" Width="75" Name="btn_TakeCall" Click="btn_TakeCall_Click"/>
-        <Button Content="End Call" HorizontalAlignment="Left" Margin="506,124,0,0" VerticalAlignment="Top" Width="75" Name="btn_EndCall" Click="btn_EndCall_Click" />
-        <Button Content="Make Call" HorizontalAlignment="Left" Margin="338,62,0,0" VerticalAlignment="Top" Width="75" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
-        <Button Content="Make Priority Call" HorizontalAlignment="Left" Margin="361,213,0,0" VerticalAlignment="Top" Width="75" Name="btn_MakePriorityCall" Click="btn_MakePriorityCall_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="1" Content="         Make a Call &#xa;&#xa; (Like a normal person)" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="Make a Call of HIGH PRIORITY &#xa;&#xa;       (If you are important)"  Name="btn_MakePriorityCall" Click="btn_MakePriorityCall_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="       Pickup the call &#xa; That is next in the line"  Name="btn_TakeCall" Click="btn_TakeCall_Click"/>
     </Grid>
 </Window>

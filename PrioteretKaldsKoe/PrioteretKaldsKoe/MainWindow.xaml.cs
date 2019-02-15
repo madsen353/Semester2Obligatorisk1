@@ -41,10 +41,6 @@ namespace PrioteretKaldsKoe
                     myQueue.Dequeue();
             }           
         }
-        private void btn_EndCall_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
         private void btn_MakeCall_Click(object sender, RoutedEventArgs e)
         {
             //callerID.Add(i++);
