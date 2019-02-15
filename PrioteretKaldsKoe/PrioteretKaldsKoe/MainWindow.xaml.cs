@@ -25,10 +25,12 @@ namespace PrioteretKaldsKoe
         private int kaldNummer = 0;
         private int prioriteretKaldNummer = 0;
         private int antalOpkaldIkoe =0 ;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
         private void btn_TakeCall_Click(object sender, RoutedEventArgs e)
         {
             if (prioriteretKaldNummer > 0)
@@ -41,6 +43,7 @@ namespace PrioteretKaldsKoe
                     myQueue.Dequeue();
             }           
         }
+
         private void btn_MakeCall_Click(object sender, RoutedEventArgs e)
         {
             //callerID.Add(i++);

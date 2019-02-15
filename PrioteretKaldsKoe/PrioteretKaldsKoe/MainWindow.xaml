@@ -10,15 +10,19 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
-
+            <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Grid.Column="1" Content="         Make a Call &#xa;&#xa; (Like a normal person)" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="Make a Call of HIGH PRIORITY &#xa;&#xa;       (If you are important)"  Name="btn_MakePriorityCall" Click="btn_MakePriorityCall_Click"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="       Pickup the call &#xa; That is next in the line"  Name="btn_TakeCall" Click="btn_TakeCall_Click"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="         Make a Call &#xa;&#xa; (Like a normal person)" Name="btn_MakeCall" Click="btn_MakeCall_Click"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="Make a Call of HIGH PRIORITY &#xa;&#xa;       (If you are important)"  Name="btn_MakePriorityCall" Click="btn_MakePriorityCall_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="       Pickup the call &#xa; That is next in the line"  Name="btn_TakeCall" Click="btn_TakeCall_Click"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Should display the number of &#xa;normal people waiting in the &#xa;phone queue" />
+        <Label Grid.Row="1" Grid.Column="1" Content="Should display the number of &#xa;important people waiting in the &#xa;phone queue" />
+        <Label Grid.Row="2" Grid.Column="1" Content="Should display the total number &#xa;of people waiting in the phone &#xa;queue" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Maybe this can be used for something random." />
     </Grid>
 </Window>
